@@ -191,8 +191,6 @@
         <span class="subtitle" data-text="COMING SOON">COMING SOON</span>
     </div>
     <script>
-        // Браузеры блокируют автопроигрывание со звуком до первого
-        // взаимодействия пользователя — запускаем при первом клике/нажатии.
         (function () {
             var audio = document.querySelector('audio');
             if (!audio) return;
@@ -203,7 +201,6 @@
                     document.removeEventListener('keydown', tryPlay);
                     document.removeEventListener('touchstart', tryPlay);
                 }).catch(function () {
-                    /* всё ещё заблокировано — ждём следующего события */
                 });
             }
 
